@@ -10,23 +10,23 @@ let mainPageTemplate = `<html>
     <div class="container" id = "Largest" style = "width : 300px">
         <div class="row">
             <div class="col" >
-                <h1>
+                <h1  style = "color : 1EDECA">
                     Personal Page
                 </h1>
                 <nav class="navbar navbar-default" role="navigation">
                     <div class="container-fluid">
                         <div class="navbar-header">
-                            <a class="navbar-brand" href="#">Personal Information</a>
+                            <a class="navbar-brand" href="#" style = "color : pink">Personal Information</a>
                         </div>
                         <div>
                             <ul class="nav navbar-nav">
-                                <li><a id="name">Name </a></li>
-                                <li><a id="status">Status </a></li>
-                                <li><a id="cid">Cid </a></li>
-                                <li><a id="department">Department</a> </li>
-                                <li><a id="category_class">Class </a></li>
-                                <li><a id="email">Email </a></li>
-                                <li><a id="personal_tutor">Tutor </a></li>
+                                <li><a id="name" style = "color : white">Name </a></li>
+                                <li><a id="status" style = "color : white">Status </a></li>
+                                <li><a id="cid" style = "color : white">Cid </a></li>
+                                <li><a id="department" style = "color : white">Department</a> </li>
+                                <li><a id="category_class" style = "color : white">Class </a></li>
+                                <li><a id="email" style = "color : white">Email </a></li>
+                                <li><a id="personal_tutor" style = "color : white">Tutor </a></li>
                             </ul>
                         </div>
                     </div>
@@ -34,11 +34,11 @@ let mainPageTemplate = `<html>
                 <nav class="navbar navbar-default" role="navigation">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#">TimeTable</a>
+                        <a class="navbar-brand" href="#" style = "color : pink">TimeTable</a>
                     </div>
                     <div>
                         <ul class="nav navbar-nav">
-                            <li><a id="timetable_button" class="btn"> My TimeTable</a></li>
+                            <li><a id="timetable_button" class="btn"  style = "color : white"> My TimeTable</a></li>
                         </ul>
                     </div>
                 </div>
@@ -48,15 +48,15 @@ let mainPageTemplate = `<html>
                     <nav class="navbar navbar-default" role="navigation">
                         <div class="container-fluid">
                             <div class="navbar-header">
-                                <a class="navbar-brand" href="#">Other Useful Links</a>
+                                <a class="navbar-brand" href="#" style = "color : pink">Other Useful Links</a>
                             </div>
                             <div>
                                 <ul class="nav navbar-nav">
-                                    <li><a href="#">Department Grading Schema</a></li>
-                                    <li><a href="#">Late Submissions and Extensions</a></li>
-                                    <li><a href="#">Projects Portal</a></li>
-                                    <li><a href="#">Email and Modules subscriptions</a></li>
-                                    <li><a href="#">Teaching Database</a></li>
+                                    <li><a href="#" style = "color : white">Department Grading Schema</a></li>
+                                    <li><a href="#" style = "color : white">Late Submissions and Extensions</a></li>
+                                    <li><a href="#" style = "color : white">Projects Portal</a></li>
+                                    <li><a href="#" style = "color : white">Email and Modules subscriptions</a></li>
+                                    <li><a href="#" style = "color : white">Teaching Database</a></li>
                                 </ul>
                             </div>
                         </div>
