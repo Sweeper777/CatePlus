@@ -12,8 +12,13 @@
     "content_scripts": [
       {
         "matches": ["https://cate.doc.ic.ac.uk/*"],
-        "css": ["cateplus.css"],
-        "js": ["node_modules/jquery/dist/jquery.js", "cateplus.js", "afterward.js", "addicons.js"]
+        "css" : ["cateplus.css"],
+        "js": ["node_modules/jquery/dist/jquery.js", "cateplus.js", "addicons.js"]
+      },
+      {
+        "matches": ["https://cate.doc.ic.ac.uk/personal.cgi*"],
+        "css" : ["mainPage.css"],
+        "js": ["node_modules/jquery/dist/jquery.js", "cateplus.js", "swapMainPage.js", "addicons.js"]
       },
       {
         "matches": ["https://cate.doc.ic.ac.uk/timetable.cgi*"],
@@ -22,7 +27,7 @@
       }
     ],
     "background": {
-      "scripts": ["background.js"],
+      "scripts": ["node_modules/jquery/dist/jquery.js", "background.js"],
       "persistent": true
     },
     "icons": {
@@ -43,6 +48,7 @@
       "icons/timetable_arrow_right_single.png",
       "icons/timetable_arrow_right_double.png",
       "icons/timetable_arrow_left_single.png",
-      "icons/timetable_arrow_left_double.png"
+      "icons/timetable_arrow_left_double.png",
+      "template.html"
     ]
   }
