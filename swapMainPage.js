@@ -20,13 +20,13 @@ let mainPageTemplate = `<html>
                         </div>
                         <div>
                             <ul class="nav navbar-nav">
-                                <li><a id="name" style = "color : white">Name </a></li>
-                                <li><a id="status" style = "color : white">Status </a></li>
-                                <li><a id="cid" style = "color : white">Cid </a></li>
-                                <li><a id="department" style = "color : white">Department</a> </li>
-                                <li><a id="category_class" style = "color : white">Class </a></li>
-                                <li><a id="email" style = "color : white">Email </a></li>
-                                <li><a id="personal_tutor" style = "color : white">Tutor </a></li>
+                                <li><a id="name" style = "color : DDDDDD">Name </a></li>
+                                <li><a id="status" style = "color : DDDDDD">Status </a></li>
+                                <li><a id="cid" style = "color : DDDDDD">Cid </a></li>
+                                <li><a id="department" style = "color : DDDDDD">Department</a> </li>
+                                <li><a id="category_class" style = "color : DDDDDD">Class </a></li>
+                                <li><a id="email" style = "color : DDDDDD">Email </a></li>
+                                <li><a id="personal_tutor" style = "color : DDDDDD">Tutor </a></li>
                             </ul>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ let mainPageTemplate = `<html>
                     </div>
                     <div>
                         <ul class="nav navbar-nav">
-                            <li><a id="timetable_button" class="btn"  style = "color : white"> My TimeTable</a></li>
+                            <li><a id="timetable_button" class="btn"  style = "color : FFFFFF"> My TimeTable</a></li>
                         </ul>
                     </div>
                 </div>
@@ -52,11 +52,11 @@ let mainPageTemplate = `<html>
                             </div>
                             <div>
                                 <ul class="nav navbar-nav">
-                                    <li><a href="#" style = "color : white">Department Grading Schema</a></li>
-                                    <li><a href="#" style = "color : white">Late Submissions and Extensions</a></li>
-                                    <li><a href="#" style = "color : white">Projects Portal</a></li>
-                                    <li><a href="#" style = "color : white">Email and Modules subscriptions</a></li>
-                                    <li><a href="#" style = "color : white">Teaching Database</a></li>
+                                    <li><a href="#" style = "color : DDDDDD">Department Grading Schema</a></li>
+                                    <li><a href="#" style = "color : DDDDDD">Late Submissions and Extensions</a></li>
+                                    <li><a href="#" style = "color : DDDDDD">Projects Portal</a></li>
+                                    <li><a href="#" style = "color : DDDDDD">Email and Modules subscriptions</a></li>
+                                    <li><a href="#" style = "color : DDDDDD">Teaching Database</a></li>
                                 </ul>
                             </div>
                         </div>
