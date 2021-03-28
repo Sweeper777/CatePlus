@@ -2,14 +2,29 @@ body {
     background: #3b3831 !important;
 }
 
-
-
 .hoverableCell {
     background-color: #585550 !important;
 }
 
-td, th {
-    background: #3b3831 !important;
+.unassessed {
+    background-color: #585550;
+}
+
+.unassessedRequired {
+    background-color: #403030;
+    border: 2px solid #F39DBA;
+}
+
+.assessedIndividual, .assessedGroup {
+    background-color: #0D998B;
+    border: 2px solid #13DAC7;
+}
+.assessedIndividual a, .assessedGroup a {
+    color: #06413c !important;
+}
+
+th {
+    background-color: #585550;
 }
 
 * {
