@@ -37,7 +37,7 @@ chrome.alarms.onAlarm.addListener(
             chrome.notifications.create(alarm.name, {
                 iconUrl: "icons/logo.png",
                 message: "You have " + String(reached.count) + " " + deadlineType + " deadline(s) tommorrow!",
-                title: "CATePlus",
+                title: "CATe++",
                 type: "basic"
             }, id => {});
         })
