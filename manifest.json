@@ -14,6 +14,11 @@
         "matches": ["https://cate.doc.ic.ac.uk/*"],
         "css": ["cateplus.css"],
         "js": ["node_modules/jquery/dist/jquery.js", "cateplus.js", "afterward.js"]
+      },
+      {
+        "matches": ["https://cate.doc.ic.ac.uk/timetable.cgi*"],
+        "css": ["cateplus.css"],
+        "js": ["node_modules/jquery/dist/jquery.js", "cateplus.js", "timetable.js"]
       }
     ],
     "background": {
