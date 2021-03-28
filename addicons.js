@@ -45,7 +45,7 @@ if ($('title').text().substring(0,4) == "CATe") {
 
 }
 
-if ($('title').text().substring(-9) == "Timetable") {
+if ($('title').text().includes("Timetable")) {
     //left -1 period
     $("body > center > table > tbody > tr > td:nth-child(1) > table > tbody > tr:nth-child(1) > td:nth-child(1) > a > img").attr("src",leftArrowSingleURL).height(20);
 
@@ -60,6 +60,11 @@ if ($('title').text().substring(-9) == "Timetable") {
     $("body > center > table > tbody > tr > td:nth-child(3) > table > tbody > tr:nth-child(2) > td:nth-child(2) > a:nth-child(2) > img").attr("src",rightArrowSingleURL).height(20);
     $("body > center > table > tbody > tr > td:nth-child(3) > table > tbody > tr:nth-child(2) > td:nth-child(2) > a:nth-child(1) > img").attr("src",rightArrowSingleURL).height(20);
 
+    //right arrow
+    $("body > center > ul > img").attr("src",rightArrowURL).height(20);
+
+    //info
+    $("body > center > ul > a > img").attr("src",infoURL).height(20);
 
 
 }
