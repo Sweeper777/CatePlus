@@ -13,12 +13,37 @@
       {
         "matches": ["https://cate.doc.ic.ac.uk/*"],
         "css": ["cateplus.css"],
-        "js": ["node_modules/jquery/dist/jquery.js", "cateplus.js", "afterward.js", "addicons.js"]
+        "js": ["node_modules/jquery/dist/jquery.js", "cateplus.js", "addicons.js"]
+      },
+      {
+        "matches": ["https://cate.doc.ic.ac.uk/grading.cgi*"],
+        "css": ["regularTables.css"],
+        "js": ["regularTables.js"]
+      },
+      {
+        "matches": ["https://cate.doc.ic.ac.uk/infoextend.cgi*"],
+        "css": ["regularTables.css"],
+        "js": [ "regularTables.js"]
+      },
+      {
+        "matches": ["https://cate.doc.ic.ac.uk/projects/index.cgi*"],
+        "css": ["regularTables.css"],
+        "js": ["regularTables.js"]
+      },
+      {
+        "matches": ["https://cate.doc.ic.ac.uk/student.cgi*"],
+        "css": ["regularTables.css"],
+        "js": ["regularTables.js"]
+      },
+      {
+        "matches": ["https://cate.doc.ic.ac.uk/personal.cgi*"],
+        "css": ["cateplus.css"],
+        "js": ["swapMainPage.js"]
       },
       {
         "matches": ["https://cate.doc.ic.ac.uk/timetable.cgi*"],
         "css": ["cateplus.css"],
-        "js": ["node_modules/jquery/dist/jquery.js", "cateplus.js", "timetable.js", "addicons.js"]
+        "js": ["timetable.js"]
       }
     ],
     "background": {
