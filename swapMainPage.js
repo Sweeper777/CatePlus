@@ -1,3 +1,82 @@
+let mainPageTemplate = `<html>
+
+<head>
+    <title>Personal Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" id = "Largest">
+        <div class="row">
+            <div class="col-xs-4 col-sm-6">
+                <h1>
+                    Personal Page
+                </h1>
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">Personal Information</a>
+                        </div>
+                        <div>
+                            <ul class="nav navbar-nav">
+                                <li><a id="name">Name </a></li>
+                                <li><a id="status">Status </a></li>
+                                <li><a id="cid">Cid </a></li>
+                                <li><a id="department">Department</a> </li>
+                                <li><a id="category_class">Class </a></li>
+                                <li><a id="email">Email </a></li>
+                                <li><a id="personal_tutor">Tutor </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="panel-group" id="timetable_div">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                   TimeTable 
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <button id="timetable_button" class="btn">
+                                    My TimeTable
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div id="photo" class="container"></div> -->
+
+                    <nav class="navbar navbar-default" role="navigation">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#">Other Useful Links</a>
+                            </div>
+                            <div>
+                                <ul class="nav navbar-nav">
+                                    <li><a href="#">Department Grading Schema</a></li>
+                                    <li><a href="#">Late Submissions and Extensions</a></li>
+                                    <li><a href="#">Projects Portal</a></li>
+                                    <li><a href="#">Email and Modules subscriptions</a></li>
+                                    <li><a href="#">Teaching Database</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div id="link_to_individual_record" class="container"></div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>`
+
 let getInformation = function () {
     let texts = $('b').slice(0, 9);
     let obj = {
@@ -30,14 +109,16 @@ let generateButton = function (link, id, text) {
 let main = function () {
     let information = getInformation()
     console.log(information)
-    let r;
-    chrome.runtime.sendMessage({ greeting: "hello" }, function (response) {
-        r = response;
-        console.log(r)
-        // document.write(r);
-        $("html").html(r);
-        afterwards(information)
-    });
+    // let r;
+    // chrome.runtime.sendMessage({ greeting: "hello" }, function (response) {
+    //     r = response;
+    //     console.log(r)
+    //     // document.write(r);
+    //     $("html").html(r);
+    //     afterwards(information)
+    // });
+    document.write(mainPageTemplate)
+    afterwards(information)
 
 }
 // plugin the variables

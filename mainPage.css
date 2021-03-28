@@ -3,11 +3,11 @@ body {
 }
 
 html {
-    background-color: black;
+    background-color: 3b3831;
 }
 
-p {
-    color : green !important;
+a {
+    color :  pink!important;
 }
 
 text {
@@ -15,5 +15,9 @@ text {
 }
 
 div {
-    background-color: black;
+    background-color: 3b3831 !important;
+}
+
+#Largest {
+    background-color : 3b3831;
 }
