@@ -26,12 +26,6 @@ if (title.substring(0,4) == "CATe") {
 	// for tony: use this info for your afterwards.js
 }
 
-// if on timetable
-if (title.substring(title.length - 9) == "Timetable") {
-	$.getScript("timetable.js");
-}
-
-
 // naive way to change colors;
 
 function retrieveMatchingCSS(targets, attr, oldValue){
