@@ -41,3 +41,9 @@ changeColor("color", "rgb(0, 0, 255)", "#F391B1");
 
 // change blue accents to dark gray
 changeColor("border-color", "rgb(0, 0, 255)", "#BB86FC");
+
+chrome.storage.sync.get(["openSpecInNewTab"], result => {
+	if (result.openSpecInNewTab) {
+		$("a[title=\"View exercise specification\"]").attr("target", "_blank");
+	}
+})

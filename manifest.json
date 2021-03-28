@@ -4,6 +4,7 @@
     "description": "Adds many more features to CATe",
     "manifest_version": 2,
     "permissions": [
+      "storage",
       "webRequest",
       "webRequestBlocking",
       "https://cate.doc.ic.ac.uk/*"
