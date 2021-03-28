@@ -2,7 +2,7 @@ body {
     background: #3b3831 !important;
 }
 
-.unassessed {
+.unassessed, .grayCells {
     background-color: #585550;
 }
 

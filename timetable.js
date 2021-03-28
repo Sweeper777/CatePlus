@@ -34,6 +34,15 @@ $(assessedIndividual).addClass("assessedIndividual");
 const assessedGroup = retrieveMatchingCSS("td", "background-color", "rgb(240, 204, 240)");
 $(assessedGroup).addClass("assessedGroup");
 
+// remove misassigned classes
+
+var falseCells = $('tr').filter(function(){
+	var leadingText = $(this).find("b").find("font").html();
+	return (leadingText == "Subscribed") || (leadingText == "Non-Subscribed");
+}).children();
+
+falseCells.removeClass("unassessed");
+falseCells.addClass("grayCells");
 
 // fix inconsistent colors with text and border lines
 
