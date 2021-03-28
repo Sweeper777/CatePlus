@@ -14,9 +14,10 @@ var rightArrowDoubleURL = chrome.extension.getURL("icons/timetable_arrow_right_d
 var leftArrowSingleURL = chrome.extension.getURL("icons/timetable_arrow_left_single.png");
 var leftArrowDoubleURL = chrome.extension.getURL("icons/timetable_arrow_left_double.png");
 
-//mainpage
-if ($('title').text().substring(0,4) == "CATe") {
-    
+var title = $('title').text();
+
+// main page
+if (title.substring(0,4) == "CATe" && title != "CATe - Grading Scheme") {
     //logo
     $("body > form > table > tbody > tr:nth-child(1) > td:nth-child(1) > h2 > img").attr("src",logoURL).height(20);
 
@@ -42,10 +43,10 @@ if ($('title').text().substring(0,4) == "CATe") {
 
     //right email icon
     $("body > form > table > tbody > tr:nth-child(3) > td:nth-child(2) > ul > table > tbody > tr:nth-child(2) > td:nth-child(3) > font > a > img").attr("src",emailURL).height(30);
-
 }
 
-if ($('title').text().includes("Timetable")) {
+// timetable
+if (title.includes("Timetable")) {
     //left -1 period
     $("body > center > table > tbody > tr > td:nth-child(1) > table > tbody > tr:nth-child(1) > td:nth-child(1) > a > img").attr("src",leftArrowSingleURL).height(20);
 
@@ -65,6 +66,11 @@ if ($('title').text().includes("Timetable")) {
 
     //info
     $("body > center > ul > a > img").attr("src",infoURL).height(20);
-
-
 }
+
+// grading scheme
+if (title.includes("Grading Scheme")) {
+    $("td").find("img").eq(0).attr("src",logoURL).height(84);
+}
+
+
