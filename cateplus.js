@@ -1,7 +1,7 @@
 
-// if on main page
 var title = $('title').text();
 
+// if on main page
 if (title.substring(0,4) == "CATe") {
 	// extract necessary information
 
@@ -26,6 +26,7 @@ if (title.substring(0,4) == "CATe") {
 	// for tony: use this info for your afterwards.js
 }
 
+// if on timetable
 if (title.substring(title.length - 9) == "Timetable") {
 
 	// assign classes for each group
@@ -43,16 +44,16 @@ if (title.substring(title.length - 9) == "Timetable") {
 	$(assessedGroup).addClass("assessedGroup");
 
 
-	// make lines pink
-	
-	$('td').filter(function(){
-		return ($(this).css("background-color") == "rgb(142, 249, 249)");
-	}).css("background-color", "#F39DBA");
+	// fix inconsistent colors with text and border lines
 
+	// make border pink
+	changeColor("td", "background-color", "rgb(142, 249, 249)", "#F39DBA");
+	// change td inconsistency to gray
+	changeColor("td", "background-color", "rgb(224, 249, 249)", "#585550");
 }
 
 
-// naive way to change all black and blue to white and pink
+// naive way to change colors;
 
 function retrieveMatchingCSS(targets, attr, oldValue){
 	return $(targets).filter(function(){
@@ -60,19 +61,25 @@ function retrieveMatchingCSS(targets, attr, oldValue){
 	});
 }
 
-function changeColor(attr, oldColor, newColor) {
-	$(retrieveMatchingCSS("*", attr, oldColor)).css(attr, newColor);
+function changeColor(targets, attr, oldColor, newColor) {
+	$(retrieveMatchingCSS(targets, attr, oldColor)).css(attr, newColor);
 }
 
+// switch css color palette
+
 // change black text to white
-changeColor("color", "rgb(0, 0, 0)", "#FFFFFF");
-
+changeColor("*", "color", "rgb(0, 0, 0)", "#FFFFFF");
 // change blue text to pink
-changeColor("color", "rgb(0, 0, 255)", "#F391B1");
-
+changeColor("*", "color", "rgb(0, 0, 255)", "#F391B1");
+// change red/green text to purple
+changeColor("*", "color", "rgb(255, 0, 0)", "#BB86FC");
+changeColor("*", "color", "rgb(0, 128, 0)", "#BB86FC");
 // change blue accents to dark gray
-changeColor("border-color", "rgb(0, 0, 255)", "#BB86FC");
-
-
+changeColor("td", "border-color", "rgb(0, 0, 255)", "#F39DBA");
+// change red accents to purple
+changeColor("td", "border-color", "rgb(255, 0, 0)", "#BB86FC");
+changeColor("td", "background-color", "rgb(244, 173, 183)", "#403030");
+// change gray accents to light gray
+changeColor("td", "background-color", "rgb(221, 221, 221)", "#403030");
 
 
