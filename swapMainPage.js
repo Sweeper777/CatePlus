@@ -31,23 +31,18 @@ let mainPageTemplate = `<html>
                         </div>
                     </div>
                 </nav>
-                <div class="panel-group" id="timetable_div">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                   TimeTable 
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseOne" class="panel-collapse collapse in">
-                            <div class="panel-body">
-                                <button id="timetable_button" class="btn">
-                                    My TimeTable
-                                </button>
-                            </div>
-                        </div>
+                <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">TimeTable</a>
                     </div>
+                    <div>
+                        <ul class="nav navbar-nav">
+                            <li><a id="timetable_button" class="btn"> My TimeTable</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
                     <!-- <div id="photo" class="container"></div> -->
 
                     <nav class="navbar navbar-default" role="navigation">
@@ -67,7 +62,7 @@ let mainPageTemplate = `<html>
                         </div>
                     </nav>
                     <div id="link_to_individual_record" class="container"></div>
-                </div>
+                
             </div>
         </div>
         <script src="https://code.jquery.com/jquery.js"></script>
