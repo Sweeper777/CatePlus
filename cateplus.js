@@ -28,28 +28,7 @@ if (title.substring(0,4) == "CATe") {
 
 // if on timetable
 if (title.substring(title.length - 9) == "Timetable") {
-
-	// assign classes for each group
-
-	const unassessed = retrieveMatchingCSS("td", "background-color", "rgb(255, 255, 255)");
-	$(unassessed).addClass("unassessed");
-
-	const unassessedRequired = retrieveMatchingCSS("td", "background-color", "rgb(205, 205, 205)");
-	$(unassessedRequired).addClass("unassessedRequired");
-
-	const assessedIndividual = retrieveMatchingCSS("td", "background-color", "rgb(204, 255, 204)");
-	$(assessedIndividual).addClass("assessedIndividual");
-
-	const assessedGroup = retrieveMatchingCSS("td", "background-color", "rgb(240, 204, 240)");
-	$(assessedGroup).addClass("assessedGroup");
-
-
-	// fix inconsistent colors with text and border lines
-
-	// make border pink
-	changeColor("td", "background-color", "rgb(142, 249, 249)", "#F39DBA");
-	// change td inconsistency to gray
-	changeColor("td", "background-color", "rgb(224, 249, 249)", "#585550");
+	$.getScript("timetable.js");
 }
 
 
