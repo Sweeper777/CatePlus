@@ -2,14 +2,23 @@ body {
     background: #3b3831 !important;
 }
 
-
-
-.hoverableCell {
-    background-color: #585550 !important;
+.unassessed, .grayCells, .module, .classes {
+    background-color: #585550;
 }
 
-td, th {
-    background: #3b3831 !important;
+.unassessedRequired {
+    background-color: #403030;
+}
+
+.assessedIndividual, .assessedGroup {
+    background-color: #0D998B;
+}
+.assessedIndividual a, .assessedGroup a {
+    color: #06413c !important;
+}
+
+th {
+    background-color: #585550;
 }
 
 * {
@@ -29,6 +38,7 @@ a {
 
 .hoverableCell:hover {
     transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #vert-rule {
