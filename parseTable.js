@@ -1,5 +1,5 @@
 let selectDate = function(){
-    let htmlCollection = $("body > table:nth-child(3) > tbody > tr:nth-child(3)").children
+    let htmlCollection = $("body > table:nth-child(3) > tbody > tr:nth-child(3)").children()
     let dateArray = Array.from(htmlCollection).slice(1)
     let outputArray = []
     for (let i of dateArray){
@@ -10,7 +10,7 @@ let selectDate = function(){
 }
 
 let selectHw = function(){
-    let htmlCollection = $("body > table:nth-child(3) > tbody > tr:nth-child(4)").children
+    let htmlCollection = $("body > table:nth-child(3) > tbody > tr:nth-child(4)").children()
     let hwArray = Array.from(htmlCollection).slice(2)
     let outputArray = []
     for (i of hwArray){
@@ -21,7 +21,7 @@ let selectHw = function(){
 }
 
 let selectExam = function(){
-    let htmlCollection = $("body > table:nth-child(3) > tbody > tr:nth-child(5)").children
+    let htmlCollection = $("body > table:nth-child(3) > tbody > tr:nth-child(5)").children()
     let examArray = Array.from(htmlCollection).slice(2)
     let outputArray = []
     for (i of examArray){
@@ -32,7 +32,7 @@ let selectExam = function(){
 }
 
 let selectMonth = function(){
-    let htmlCollection = $("body > table:nth-child(3) > tbody > tr:nth-child(1)").children
+    let htmlCollection = $("body > table:nth-child(3) > tbody > tr:nth-child(1)").children()
     let monthArray = Array.from(htmlCollection).slice(1)
     let outputArray = []
     for (i of monthArray){

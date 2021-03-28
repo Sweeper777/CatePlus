@@ -7,7 +7,8 @@
       "storage",
       "webRequest",
       "webRequestBlocking",
-      "https://cate.doc.ic.ac.uk/*"
+      "https://cate.doc.ic.ac.uk/*",
+      "notifications"
     ],
     "content_scripts": [
       {
@@ -43,11 +44,11 @@
       {
         "matches": ["https://cate.doc.ic.ac.uk/timetable.cgi*"],
         "css": ["cateplus.css"],
-        "js": ["timetable.js"]
+        "js": ["timetable.js", "parseTable.js", "notifications.js"]
       }
     ],
     "background": {
-      "scripts": ["background.js"],
+      "scripts": ["background.js", "notificationsBg.js"],
       "persistent": true
     },
     "icons": {
