@@ -1,7 +1,8 @@
 
-// if on main page
+var title = $('title').text();
 
-if ($('title').text().substring(0,4) == "CATe") {
+// if on main page
+if (title.substring(0,4) == "CATe") {
 	// extract necessary information
 
 	let texts = $('b').slice(0,9);
@@ -16,34 +17,42 @@ if ($('title').text().substring(0,4) == "CATe") {
 	const pTutor = $(texts[7]).text();
 	const timetablePeriod = $($(texts[8]).parent().parent().parent().find(":first-child")[1]).val();
 	const year = $('font').slice(0).html().substring(0,4);
+	const moduleCode = category.split(" ")[3];
 
 	// the appropriate time-table link:
-	const timetableLink = "https://cate.doc.ic.ac.uk/timetable.cgi?keyt=" + year + ":" + timetablePeriod + ":j1:" + login;
+	const timetableLink = "https://cate.doc.ic.ac.uk/timetable.cgi?keyt=" + year + ":" + timetablePeriod + ":" + moduleCode + ":" + login;
 	// console.log(timetableLink)
 
 	// for tony: use this info for your afterwards.js
 }
 
+// naive way to change colors;
 
-// naive way to change all black and blue to white and pink
-
-function changeColor(attr, oldColor, newColor) {
-	$('*').filter(function(){
-		return ($(this).css(attr) == oldColor)
-	}).css(attr, newColor);
+function retrieveMatchingCSS(targets, attr, oldValue){
+	return $(targets).filter(function(){
+		return ($(this).css(attr) == oldValue);
+	});
 }
 
+function changeColor(targets, attr, oldColor, newColor) {
+	$(retrieveMatchingCSS(targets, attr, oldColor)).css(attr, newColor);
+}
+
+// switch css color palette
+
 // change black text to white
-changeColor("color", "rgb(0, 0, 0)", "#FFFFFF");
-
+changeColor("*", "color", "rgb(0, 0, 0)", "#FFFFFF");
 // change blue text to pink
-changeColor("color", "rgb(0, 0, 255)", "#F391B1");
-
+changeColor("*", "color", "rgb(0, 0, 255)", "#F391B1");
+// change red/green text to purple
+changeColor("*", "color", "rgb(255, 0, 0)", "#BB86FC");
+changeColor("*", "color", "rgb(0, 128, 0)", "#BB86FC");
 // change blue accents to dark gray
-changeColor("border-color", "rgb(0, 0, 255)", "#BB86FC");
+changeColor("td", "border-color", "rgb(0, 0, 255)", "#F39DBA");
+// change red accents to purple
+changeColor("td", "border-color", "rgb(255, 0, 0)", "#BB86FC");
+changeColor("td", "background-color", "rgb(244, 173, 183)", "#403030");
+// change gray accents to light gray
+changeColor("td", "background-color", "rgb(221, 221, 221)", "#403030");
 
-chrome.storage.sync.get(["openSpecInNewTab"], result => {
-	if (result.openSpecInNewTab) {
-		$("a[title=\"View exercise specification\"]").attr("target", "_blank");
-	}
-})
+
