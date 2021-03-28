@@ -1,5 +1,15 @@
 var options;
 
+chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+    if(request.cmd == "read_file") {
+        $.ajax({
+            url: chrome.extension.getURL("template.html"),
+            dataType: "html",
+            success: sendResponse
+        });
+    }
+})
+
 chrome.storage.sync.get(["openSpecInNewTab"], result => {
     options = result;
 })
