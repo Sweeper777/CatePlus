@@ -43,12 +43,12 @@ if (title.substring(title.length - 9) == "Timetable") {
 	$(assessedGroup).addClass("assessedGroup");
 
 
-	// make lines pink
-	
-	$('td').filter(function(){
-		return ($(this).css("background-color") == "rgb(142, 249, 249)");
-	}).css("background-color", "#F39DBA");
+	// fix inconsistent colors with text and border lines
 
+	// make border pink
+	changeColor("td", "background-color", "rgb(142, 249, 249)", "#F39DBA");
+	// change td inconsistency to gray
+	changeColor("td", "background-color", "rgb(224, 249, 249)", "#585550");
 }
 
 
@@ -60,19 +60,22 @@ function retrieveMatchingCSS(targets, attr, oldValue){
 	});
 }
 
-function changeColor(attr, oldColor, newColor) {
-	$(retrieveMatchingCSS("*", attr, oldColor)).css(attr, newColor);
+function changeColor(targets, attr, oldColor, newColor) {
+	$(retrieveMatchingCSS(targets, attr, oldColor)).css(attr, newColor);
 }
 
+// switch css color palette
+
 // change black text to white
-changeColor("color", "rgb(0, 0, 0)", "#FFFFFF");
-
+changeColor("*", "color", "rgb(0, 0, 0)", "#FFFFFF");
 // change blue text to pink
-changeColor("color", "rgb(0, 0, 255)", "#F391B1");
-
+changeColor("*", "color", "rgb(0, 0, 255)", "#F391B1");
+// change red text to purple
+changeColor("*", "color", "rgb(255, 0, 0)", "#BB86FC");
 // change blue accents to dark gray
-changeColor("border-color", "rgb(0, 0, 255)", "#BB86FC");
-
-
-
+changeColor("td", "border-color", "rgb(0, 0, 255)", "#F39DBA");
+// change red accents to purple
+changeColor("td", "border-color", "rgb(255, 0, 0)", "#BB86FC");
+// change gray accents to light gray
+changeColor("td", "background-color", "rgb(221, 221, 221)", "#403030");
 
