@@ -28,7 +28,7 @@ if ($('title').text().substring(0,4) == "CATe") {
 
     
     //mainpage left table arrow
-    $("body > form > table > tbody > tr:nth-child(2) > td:nth-child(1) > ul:nth-child(3) > form > table > tbody > tr > td:nth-child(3) > table > tbody > tr > td > table > tbody > tr:nth-child(1) > th > img").attr("src",downArrowSingleURL).height(15);
+    $("body > form > table > tbody > tr:nth-child(2) > td:nth-child(1) > ul:nth-child(3) > form > table > tbody > tr > td:nth-child(3) > table > tbody > tr > td > table > tbody > tr:nth-child(1) > th > img").attr("src",downArrowURL).height(15);
     //mainpage first right down arrow
     $("body > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > ul > table > tbody > tr:nth-child(1) > th:nth-child(3) > img").attr("src",downArrowURL).height(15);
     //mainpage second right down arrow
