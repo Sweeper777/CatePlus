@@ -8,7 +8,8 @@
       "webRequest",
       "webRequestBlocking",
       "https://cate.doc.ic.ac.uk/*",
-      "notifications"
+      "notifications",
+      "alarms"
     ],
     "content_scripts": [
       {

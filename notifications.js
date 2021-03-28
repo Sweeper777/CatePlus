@@ -10,6 +10,11 @@ function deadlinesFromTaskSelector(taskSelector) {
     return mapFromDDLToDate(taskSelector(), selectDate(), selectMonth());
 }
 
+function notificationTimeForDeadline(deadline) {
+    var deadlineDate = new Date(new Date().getFullYear(), deadline.month, deadline.day, 9);
+    return deadlineDate.setDate(deadlineDate.getDate() - 1);
+}
+
 function scheduleDeadlineNotifications(rawDeadlines, storageKey) {
     var deadlines = rawDeadlines.map(x => ({
         count: x.numOfDDLs, 
@@ -17,12 +22,10 @@ function scheduleDeadlineNotifications(rawDeadlines, storageKey) {
         month: monthArray.indexOf(x.month)
     }));
 
-    function clearExistingNotifications(storedDeadlines, completion) {
-        var ids = storedDeadlines.map(x => notificationId(x, storageKey));
+    function clearExistingNotifications() {
         chrome.runtime.sendMessage({
-            notificationAction: "clear",
-            notificationIds: ids
-        }, completion);
+            notificationAction: "clear"
+        }, saveNewDeadlinesAndScheduleNotifications);
     }
 
     function saveNewDeadlinesAndScheduleNotifications() {
@@ -31,17 +34,14 @@ function scheduleDeadlineNotifications(rawDeadlines, storageKey) {
         chrome.storage.local.set(newDeadlinesObject, () => {
             var i = 1;
             for (var newDeadline of deadlines) {
+                if (notificationTimeForDeadline(newDeadline) < Date.now()) {
+                    continue;
+                }
                 var id = notificationId(newDeadline, storageKey);
                 chrome.runtime.sendMessage({
                     notificationAction: "create",
                     notificationId: id,
-                    notificationOptions: {
-                        iconUrl: "icons/logo.png",
-                        message: "You have " + String(newDeadline.count) + " deadline(s) tommorrow!",
-                        title: "CATePlus",
-                        type: "basic",
-                        eventTime: new Date(new Date().getFullYear(), newDeadline.month, newDeadline.day, 9).getTime()
-                    }
+                    notificationTime: notificationTimeForDeadline(newDeadline)
                 }, response => {});
                 i++;
             }
@@ -51,7 +51,7 @@ function scheduleDeadlineNotifications(rawDeadlines, storageKey) {
     chrome.storage.local.get([storageKey], result => {
         var storedDeadlines = result[storageKey];
         if (storedDeadlines) {
-            clearExistingNotifications(storedDeadlines, saveNewDeadlinesAndScheduleNotifications);
+            clearExistingNotifications(storedDeadlines);
         } else {
             saveNewDeadlinesAndScheduleNotifications();
         }
