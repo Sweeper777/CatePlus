@@ -1,7 +1,7 @@
 
-// if on main page
 var title = $('title').text();
 
+// if on main page
 if (title.substring(0,4) == "CATe") {
 	// extract necessary information
 
@@ -26,6 +26,7 @@ if (title.substring(0,4) == "CATe") {
 	// for tony: use this info for your afterwards.js
 }
 
+// if on timetable
 if (title.substring(title.length - 9) == "Timetable") {
 
 	// assign classes for each group
@@ -52,7 +53,7 @@ if (title.substring(title.length - 9) == "Timetable") {
 }
 
 
-// naive way to change all black and blue to white and pink
+// naive way to change colors;
 
 function retrieveMatchingCSS(targets, attr, oldValue){
 	return $(targets).filter(function(){
