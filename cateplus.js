@@ -1,4 +1,3 @@
-var title = $('title').text();
 
 // naive way to change colors;
 

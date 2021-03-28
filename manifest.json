@@ -13,12 +13,12 @@
       {
         "matches": ["https://cate.doc.ic.ac.uk/*"],
         "css": ["cateplus.css"],
-        "js": ["node_modules/jquery/dist/jquery.js", "cateplus.js", "afterward.js"]
+        "js": ["node_modules/jquery/dist/jquery.js", "cateplus.js", "afterward.js", "addicons.js"]
       },
       {
         "matches": ["https://cate.doc.ic.ac.uk/timetable.cgi*"],
         "css": ["cateplus.css"],
-        "js": ["node_modules/jquery/dist/jquery.js", "cateplus.js", "timetable.js"]
+        "js": ["node_modules/jquery/dist/jquery.js", "cateplus.js", "timetable.js", "addicons.js"]
       }
     ],
     "background": {
@@ -31,5 +31,18 @@
     "options_ui": {
       "page": "options.html",
       "open_in_tab": false
-    }
+    },
+    "web_accessible_resources": [
+      "icons/mainpage_logo.png",
+      "icons/mainpage_arraow_right.png",
+      "icons/info.png",
+      "icons/mainpage_arraow_down.png",
+      "icons/mainpage_grading.png",
+      "icons/mainpage_late.png",
+      "icons/email.png",
+      "icons/timetable_arrow_right_single.png",
+      "icons/timetable_arrow_right_double.png",
+      "icons/timetable_arrow_left_single.png",
+      "icons/timetable_arrow_left_double.png"
+    ]
   }
