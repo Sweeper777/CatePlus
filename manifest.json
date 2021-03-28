@@ -4,11 +4,26 @@
     "description": "Adds many more features to CATe",
     "manifest_version": 2,
     "permissions": [
-      
+      "webRequest",
+      "webRequestBlocking",
+      "https://cate.doc.ic.ac.uk/*"
     ],
-    "content_scripts": [{
-      "matches": ["https://cate.doc.ic.ac.uk/*"],
-      "css": ["cateplus.css"],
-      "js": ["node_modules/jquery/dist/jquery.js", "cateplus.js"]
-    }]
+    "content_scripts": [
+      {
+        "matches": ["https://cate.doc.ic.ac.uk/*"],
+        "css": ["cateplus.css"],
+        "js": ["node_modules/jquery/dist/jquery.js", "cateplus.js", "afterward.js"]
+      }
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
+    "icons": {
+      "512": "icons/logo.png"
+    },
+    "options_ui": {
+      "page": "options.html",
+      "open_in_tab": false
+    }
   }

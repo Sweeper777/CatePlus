@@ -1,0 +1,10 @@
+{
+    "dependencies": {
+        "jquery": "3.6.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Sweeper777/CatePlus.git"
+    },
+    "license": "MIT"
+}
