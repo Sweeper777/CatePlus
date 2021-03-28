@@ -52,11 +52,12 @@ let mainPageTemplate = `<html>
                             </div>
                             <div>
                                 <ul class="nav navbar-nav">
-                                    <li><a href="#" style = "color : DDDDDD">Department Grading Schema</a></li>
-                                    <li><a href="#" style = "color : DDDDDD">Late Submissions and Extensions</a></li>
-                                    <li><a href="#" style = "color : DDDDDD">Projects Portal</a></li>
-                                    <li><a href="#" style = "color : DDDDDD">Email and Modules subscriptions</a></li>
-                                    <li><a href="#" style = "color : DDDDDD">Teaching Database</a></li>
+                                    <li><a id="dgs" href="#" style = "color : DDDDDD">Department Grading Schema</a></li>
+                                    <li><a id="lse" href="#" style = "color : DDDDDD">Late Submissions and Extensions</a></li>
+                                    <li><a id="pp" href="#" style = "color : DDDDDD">Projects Portal</a></li>
+                                    <li><a id="sir" href="#" style = "color : DDDDDD">Student Individual Record</a></li>
+                                    <li><a id="ems" href="#" style = "color : DDDDDD">Email and Modules subscriptions</a></li>
+                                    <li><a id="td" href="#" style = "color : DDDDDD">Teaching Database</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -130,6 +131,13 @@ let afterwards = function (data) {
     $("#email").append(data.email)
     $("#personal_tutor").append(data.pTutor)
     $("#timetable_button").on("click", () => { window.open(data.timetableLink) })
+    $("#dgs").attr("href", "grading.cgi?key=" + data.year + ":" + data.login);
+    $("#lse").attr("href", "infoextend.cgi?key=" + data.year + ":" + data.login);
+    $("#pp").attr("href", "projects/index.cgi?key=" + data.year + ":" + data.login);
+    $("#sir").attr("href", "student.cgi?key=" + data.year + ":" + data.login);
+    $("#ems").attr("href", "https://dbc.doc.ic.ac.uk/internalreg/");
+    $("#td").attr("href", "https://teachdb.doc.ic.ac.uk/db/");
+
 }
 
 main()
