@@ -34,6 +34,7 @@ let main = function () {
     chrome.runtime.sendMessage({ greeting: "hello" }, function (response) {
         r = response;
         console.log(r)
+        // document.write(r);
         $("html").html(r);
         afterwards(information)
     });

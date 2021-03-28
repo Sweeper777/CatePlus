@@ -2,10 +2,18 @@ body {
     background: #3b3831 !important;
 }
 
+html {
+    background-color: black;
+}
+
 p {
     color : green !important;
 }
 
 text {
     color : red !important;
+}
+
+div {
+    background-color: black;
 }
