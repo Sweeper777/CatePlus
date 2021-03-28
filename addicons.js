@@ -14,6 +14,12 @@ var rightArrowDoubleURL = chrome.extension.getURL("icons/timetable_arrow_right_d
 var leftArrowSingleURL = chrome.extension.getURL("icons/timetable_arrow_left_single.png");
 var leftArrowDoubleURL = chrome.extension.getURL("icons/timetable_arrow_left_double.png");
 
+
+// change favicon
+$("head").find("link").filter(function(){
+    return $(this).attr("href") == "icons/favcate3.gif";
+}).attr("href", logoURL);
+
 var title = $('title').text();
 
 // main page
@@ -71,6 +77,17 @@ if (title.includes("Timetable")) {
 // grading scheme
 if (title.includes("Grading Scheme")) {
     $("td").find("img").eq(0).attr("src",logoURL).height(84);
+}
+
+// projects portal
+if (title.includes("Projects Portal")) {
+    $("img").filter(function(){
+        return $(this).attr("src") == "icons/info.gif";
+    }).attr("src", infoURL).height(20);
+
+    // $("img").filter(function(){
+    //     return $(this).attr("src") == "icons/admin.gif";
+    // }).attr("src", infoURL).height(20);
 }
 
 
