@@ -13,9 +13,9 @@ let mainPageTemplate = `<html>
                 <h1  style = "color : 1EDECA">
                     Personal Page
                 </h1>
-                <nav class="navbar navbar-default" role="navigation">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
+                <nav class="navbar navbar-default" role="navigation" style = "background-color : 585550">
+                    <div class="container-fluid"   style = "background-color : 585550">
+                        <div class="navbar-header"   style = "background-color : 585550">
                             <a class="navbar-brand" href="#" style = "color : pink">Personal Information</a>
                         </div>
                         <div>
@@ -31,9 +31,9 @@ let mainPageTemplate = `<html>
                         </div>
                     </div>
                 </nav>
-                <nav class="navbar navbar-default" role="navigation">
-                <div class="container-fluid">
-                    <div class="navbar-header">
+                <nav class="navbar navbar-default" role="navigation"  style = "background-color : 585550">
+                <div class="container-fluid"   style = "background-color : 585550">
+                    <div class="navbar-header"   style = "background-color : 585550">
                         <a class="navbar-brand" href="#" style = "color : pink">TimeTable</a>
                     </div>
                     <div>
@@ -46,8 +46,8 @@ let mainPageTemplate = `<html>
                     <!-- <div id="photo" class="container"></div> -->
 
                     <nav class="navbar navbar-default" role="navigation">
-                        <div class="container-fluid">
-                            <div class="navbar-header">
+                        <div class="container-fluid"   style = "background-color : 585550">
+                            <div class="navbar-header"   style = "background-color : 585550">
                                 <a class="navbar-brand" href="#" style = "color : pink">Other Useful Links</a>
                             </div>
                             <div>
