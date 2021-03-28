@@ -1,0 +1,15 @@
+table {
+    background-color: #585550;
+    border: none;
+}
+td, th {
+    border: none;
+}
+th {
+    background-color: #403030;
+}
+input {
+    background-color: #0D998B;
+    border: none;
+    border-radius: 4px;
+}
