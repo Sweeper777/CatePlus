@@ -34,15 +34,34 @@ $(assessedIndividual).addClass("assessedIndividual");
 const assessedGroup = retrieveMatchingCSS("td", "background-color", "rgb(240, 204, 240)");
 $(assessedGroup).addClass("assessedGroup");
 
-// remove misassigned classes
+// remove misassigned unassessed classes
 
-var falseCells = $('tr').filter(function(){
+function changeClass(targets, oldClass, newClass){
+	$(targets).removeClass(oldClass);
+	$(targets).addClass(newClass);
+}
+
+var falseCells = $("tr").filter(function(){
 	var leadingText = $(this).find("b").find("font").html();
 	return (leadingText == "Subscribed") || (leadingText == "Non-Subscribed");
 }).children();
 
-falseCells.removeClass("unassessed");
-falseCells.addClass("grayCells");
+changeClass(falseCells, "unassessed", "grayCells");
+
+// module td's now have the 'module' class
+// the class td's now have the 'classes' class
+
+var moduleRows = $("tr").filter(function(){
+	var leadingCode = $(this).find("b").find("font").html();
+	return (leadingCode != "Subscribed") && (leadingCode != "Non-Subscribed") && (leadingCode != undefined);
+});
+
+$(moduleRows).each(function(){
+	var children = $(this).children();
+	changeClass($(children).eq(1), "unassessed", "module");
+	changeClass($(children).eq(2), "unassessed", "classes")
+})
+
 
 // fix inconsistent colors with text and border lines
 
