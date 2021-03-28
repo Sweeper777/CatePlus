@@ -22,17 +22,23 @@ $("body").append("<div id=\"vert-rule\"></div>");
 
 // assign classes for each group
 
+$("center ul").remove();
+
 const unassessed = retrieveMatchingCSS("td", "background-color", "rgb(255, 255, 255)");
 $(unassessed).addClass("unassessed");
+$(unassessed).attr("title", "Unassessed, no submission required");
 
 const unassessedRequired = retrieveMatchingCSS("td", "background-color", "rgb(205, 205, 205)");
 $(unassessedRequired).addClass("unassessedRequired");
+$(unassessedRequired).attr("title", "Unassessed, submission required");
 
 const assessedIndividual = retrieveMatchingCSS("td", "background-color", "rgb(204, 255, 204)");
 $(assessedIndividual).addClass("assessedIndividual");
+$(assessedIndividual).attr("title", "Assessed Individual Task");
 
 const assessedGroup = retrieveMatchingCSS("td", "background-color", "rgb(240, 204, 240)");
 $(assessedGroup).addClass("assessedGroup");
+$(assessedGroup).attr("title", "Assessed Group Task");
 
 // remove misassigned unassessed classes
 

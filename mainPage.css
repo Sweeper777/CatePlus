@@ -1,23 +1,38 @@
+
+
+/*
+darkbg = #27241D
+lightbg = #3B3831
+lighterbg = #585550
+pink = #F391B1
+cyan = #1EDECA
+white = #FFFFFF
+ */
+
 body {
-    background: #3b3831 !important;
+	background: #27241D !important;
 }
 
 html {
-    background-color: 3b3831;
-}
-
-a {
-    color :  pink!important;
-}
-
-text {
-    color : red !important;
+	background-color: #27241D;
 }
 
 div {
-    background-color: 3b3831 !important;
+    background-color: #3B3831;
 }
 
-#Largest {
-    background-color : 3b3831;
+h1 {
+	font-size: 40px;
+}
+
+button {
+    color: #000000;
+    background-color: #F391B1;
+    outline: none;
+    border: none;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
 }

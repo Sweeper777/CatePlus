@@ -7,9 +7,9 @@ let mainPageTemplate = `<html>
 </head>
 
 <body>
-    <div class="container" id = "Largest">
+    <div class="container" id = "Largest" style = "width : 300px">
         <div class="row">
-            <div class="col-xs-4 col-sm-6">
+            <div class="col" >
                 <h1>
                     Personal Page
                 </h1>
