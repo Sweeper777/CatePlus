@@ -13,7 +13,7 @@ var rightArrowSingleURL = chrome.extension.getURL("icons/timetable_arrow_right_s
 var rightArrowDoubleURL = chrome.extension.getURL("icons/timetable_arrow_right_double.png");
 var leftArrowSingleURL = chrome.extension.getURL("icons/timetable_arrow_left_single.png");
 var leftArrowDoubleURL = chrome.extension.getURL("icons/timetable_arrow_left_double.png");
-
+var adminURL = chrome.extension.getURL("icons/admin.png");
 
 // change favicon
 $("head").find("link").filter(function(){
@@ -85,9 +85,9 @@ if (title.includes("Projects Portal")) {
         return $(this).attr("src") == "icons/info.gif";
     }).attr("src", infoURL).height(20);
 
-    // $("img").filter(function(){
-    //     return $(this).attr("src") == "icons/admin.gif";
-    // }).attr("src", infoURL).height(20);
+    $("img").filter(function(){
+        return $(this).attr("src") == "icons/admin.gif";
+    }).attr("src", adminURL).height(20);
 }
 
 
